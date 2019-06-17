@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace inheritance
 {
@@ -37,6 +38,16 @@ namespace inheritance
                 FuelCapacity = 20.00
             };
 
+            List<IElectricVehicle> ElectricVehicles = new List<IElectricVehicle>();
+            List<IGasVehicle> GasVehicles = new List<IGasVehicle>();
+
+            ElectricVehicles.Add(fxs);
+            ElectricVehicles.Add(fxs2);
+            ElectricVehicles.Add(modelS);
+
+            GasVehicles.Add(mx410);
+            GasVehicles.Add(ram1500);
+
             fxs.Drive();
             fxs.Turn();
             fxs.Stop();
@@ -52,6 +63,12 @@ namespace inheritance
             ram1500.Drive();
             ram1500.Turn();
             ram1500.Stop();
+
+            BatteryStation batteryStation = new BatteryStation();
+            batteryStation.Refuel(ElectricVehicles);
+
+            GasStation gasStation = new GasStation();
+            gasStation.Refuel(GasVehicles);
         }
     }
 }

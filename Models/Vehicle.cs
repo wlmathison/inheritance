@@ -1,20 +1,24 @@
 using System;
 
-public class Vehicle
+namespace inheritance
 {
-    public string MainColor { get; set; }
-    public string MaximumOccupancy { get; set; }
+    public class Vehicle
+    {
+        public string Type { get; set; }
+        public string MainColor { get; set; }
+        public string MaximumOccupancy { get; set; }
 
-    public virtual void Drive()
-    {
-        Console.WriteLine("Vrooom!");
-    }
-    public virtual void Turn()
-    {
-        Console.WriteLine("The vehicle turns right.");
-    }
-    public virtual void Stop()
-    {
-        Console.WriteLine("The vehicle comes to a stop.");
+        public virtual void Drive()
+        {
+            Console.WriteLine("Vrooom!");
+        }
+        public virtual void Turn()
+        {
+            Console.WriteLine("The vehicle turns right.");
+        }
+        public virtual void Stop()
+        {
+            Console.WriteLine("The vehicle comes to a stop.");
+        }
     }
 }
