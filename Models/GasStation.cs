@@ -11,7 +11,7 @@ namespace inheritance
         {
             foreach (IGasVehicle vehicle in vehicles)
             {
-                Console.WriteLine($"The {vehicle.} has been refueled with {vehicle.FuelCapacity} gallons of gas.");
+                Console.WriteLine($"The {vehicle.Type} has been refueled with {vehicle.FuelCapacity} gallons of gas.");
             }
         }
     }
